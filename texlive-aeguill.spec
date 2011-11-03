@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/aeguill
+# catalog-date 2009-04-30 00:32:08 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-aeguill
 Version:	20090430
 Release:	1
@@ -45,6 +51,7 @@ in Adobe Type 1 format.
 %doc %{_texmfdistdir}/doc/latex/aeguill/guil-test2.pdf
 %doc %{_texmfdistdir}/doc/latex/aeguill/guil-test2.tex
 %doc %{_texmfdistdir}/doc/latex/aeguill/license.txt
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,3 +62,5 @@ in Adobe Type 1 format.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
