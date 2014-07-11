@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-aeguill
 Version:	20090430
-Release:	7
+Release:	8
 Summary:	Add several kinds of guillemets to the ae fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/aeguill
