@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/aeguill
-# catalog-date 2009-04-30 00:32:08 +0200
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-aeguill
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Add several kinds of guillemets to the ae fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/aeguill
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aeguill.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aeguill.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aeguill.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aeguill.doc.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ files, since the additional guillemets exist in fonts available
 in Adobe Type 1 format.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,25 +39,10 @@ in Adobe Type 1 format.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090430-2
-+ Revision: 749093
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090430-1
-+ Revision: 717801
-- texlive-aeguill
-- texlive-aeguill
-- texlive-aeguill
-- texlive-aeguill
-- texlive-aeguill
-
