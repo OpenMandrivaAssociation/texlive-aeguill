@@ -1,6 +1,6 @@
 Name:		texlive-aeguill
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Add several kinds of guillemets to the ae fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/aeguill
